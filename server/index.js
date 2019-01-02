@@ -2,10 +2,12 @@ const express = require("express");
 const router = require("./routes.js");
 const path = require("path");
 const bodyParser = require("body-parser");
+const morgan = require("morgan");
 const app = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(morgan('dev'));
 
 app.use("/homes/:id", express.static(path.join(__dirname, "../client/dist")));
 app.use("/", router);
