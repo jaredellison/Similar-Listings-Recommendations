@@ -6,7 +6,7 @@ const Listing = ({ listing }) => {
       <div className="card-img-top card-img-top-250 center-cropped">
         <img
           className="card-img-top img-fluid rounded-0"
-          src={`${listing.imageUrl}.jpg`}
+          src={listing.imageUrl}
         />
       </div>
       <div className="card-info">
